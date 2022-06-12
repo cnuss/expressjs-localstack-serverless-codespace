@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        VARIANT: 16-bullseye
+        VARIANT: 14-bullseye
     working_dir: /workspace
     volumes:
       - ..:/workspace:cached

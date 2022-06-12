@@ -1,0 +1,22 @@
+service: expressjs-codespace
+frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
+
+custom:
+  serverless-offline:
+    noPrependStageInUrl: true
+  bundle:
+    packager: yarn
