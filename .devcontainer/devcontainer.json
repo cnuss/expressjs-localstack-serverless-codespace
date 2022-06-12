@@ -1,0 +1,21 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/typescript-node
+{
+  "name": "Workspace",
+  "workspaceFolder": "/workspace",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workspace",
+  "runServices": [],
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  },
+  "forwardPorts": [3000,4566],
+  "postCreateCommand": "yarn",
+  "postAttachCommand": "yarn start",
+  "features": {
+    "aws-cli": "latest",
+    "docker-from-docker": "latest"
+  }
+}
