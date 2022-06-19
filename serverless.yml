@@ -17,6 +17,7 @@ functions:
 
 custom:
   serverless-offline:
+    host: 0.0.0.0
     noPrependStageInUrl: true
   bundle:
     packager: yarn

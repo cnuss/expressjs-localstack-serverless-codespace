@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Serverless Offline",
+        "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
+        "args": ["offline", "start", "--noTimeout"],
+        "outFiles": ["${workspaceFolder}/.webpack/**/*.js"],
+        "sourceMaps": true,
+        "internalConsoleOptions": "openOnSessionStart",
+        "presentation": {
+          "hidden": false,
+          "group": "api",
+          "order": 1
+        }
+      }
+    ]
+  }
