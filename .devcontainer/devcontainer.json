@@ -8,7 +8,7 @@
   "runServices": [],
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "philfontaine.autolaunch"]
     }
   },
   "forwardPorts": [3000, 4566],
