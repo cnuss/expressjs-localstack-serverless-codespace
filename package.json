@@ -13,7 +13,7 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "start": "serverless offline",
+    "start": "SLS_DEBUG=* && serverless offline",
     "check-lint": "eslint .",
     "lint": "eslint . --fix",
     "check-format": "prettier --check .",

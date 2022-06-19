@@ -8,12 +8,12 @@
   "runServices": [],
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "philfontaine.autolaunch"]
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
     }
   },
   "forwardPorts": [3000, 4566],
   "postCreateCommand": "yarn",
-  // "postAttachCommand": "yarn start",
+  "postAttachCommand": "yarn start",
   "features": {
     "aws-cli": "latest",
     "docker-from-docker": "latest"

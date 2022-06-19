@@ -13,8 +13,7 @@
       "outFiles": ["${workspaceFolder}/.webpack/**/*.js"],
       "sourceMaps": true,
       "internalConsoleOptions": "openOnSessionStart",
-      "console": "integratedTerminal",
-      "auto": true
+      "console": "integratedTerminal"
     }
   ]
 }
