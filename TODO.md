@@ -1,5 +1,6 @@
- - yarn start in devcontainer
- - scaffoldly devcontainer
- - configure aws extension
- - vscode extensions autoinstall
- - figure out ports to localstack (how to add another container)
+- yarn start in devcontainer
+- scaffoldly devcontainer
+- configure aws extension
+- vscode extensions autoinstall
+- figure out ports to localstack (how to add another container)
+- https://github.com/features/codespaces/signup
