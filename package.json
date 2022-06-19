@@ -14,8 +14,10 @@
   "scripts": {
     "prepare": "husky install",
     "start": "serverless offline",
+    "check-lint": "eslint .",
     "lint": "eslint . --fix",
-    "format": "prettier --config .prettierrc --write ."
+    "check-format": "prettier --check .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
