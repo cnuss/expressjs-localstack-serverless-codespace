@@ -7,14 +7,13 @@
       "name": "Serverless Offline",
       "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
       "args": ["offline", "start", "--noTimeout"],
+      "env": {
+        "SLS_DEBUG": "*"
+      },
       "outFiles": ["${workspaceFolder}/.webpack/**/*.js"],
       "sourceMaps": true,
       "internalConsoleOptions": "openOnSessionStart",
-      "presentation": {
-        "group": "Debug",
-        "hidden": false,
-        "order": 1
-      },
+      "console": "integratedTerminal",
       "auto": true
     }
   ]
