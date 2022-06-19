@@ -4,17 +4,18 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug",
+      "name": "Serverless Offline",
       "program": "${workspaceRoot}/node_modules/serverless/bin/serverless",
       "args": ["offline", "start", "--noTimeout"],
       "outFiles": ["${workspaceFolder}/.webpack/**/*.js"],
       "sourceMaps": true,
       "internalConsoleOptions": "openOnSessionStart",
       "presentation": {
-        "group": "Run",
+        "group": "Debug",
         "hidden": false,
         "order": 1
-      }
+      },
+      "auto": true
     }
   ]
 }
