@@ -1,27 +1,22 @@
 version: '3'
 services:
   workspace:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-      args:
-        VARIANT: 14-bullseye
+    image: mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14-bullseye
     working_dir: /workspace
     volumes:
       - ..:/workspace:cached
+    ports:
+      - '3000:3000' # serverless-offline
+      - '4510-4559:4510-4559' # localstack
+      - '4566:4566' # localstack
     
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 
-    network_mode: service:localstack
-
   localstack:
     image: localstack/localstack
     restart: unless-stopped
-    ports:
-      - '3000:3000'
-      - '4510-4559:4510-4559'
-      - '4566:4566'
+    network_mode: service:workspace
     environment:
       - DEBUG=1
       - DATA_DIR=${DATA_DIR-}
