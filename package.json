@@ -37,5 +37,34 @@
     "serverless-resources": "^0.1.0",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": 2
+    },
+    "ignorePatterns": [
+      ".serverless",
+      ".webpack",
+      "node_modules",
+      "yarn.lock"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100
   }
 }
