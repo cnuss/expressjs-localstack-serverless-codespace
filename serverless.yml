@@ -3,6 +3,8 @@ frameworkVersion: '3'
 
 plugins:
   - serverless-bundle
+  - serverless-localstack
+  - serverless-resources
   - serverless-offline
 
 provider:
@@ -12,8 +14,27 @@ provider:
 functions:
   api:
     handler: index.handler
+    timeout: 30
     events:
-      - httpApi: '*'
+      - http:
+          path: /
+          method: any
+      - http:
+          path: /
+          method: options
+      - http:
+          path: /{proxy+}
+          method: any
+      - http:
+          path: /{proxy+}
+          method: options
+
+resources:
+  Resources:
+    Queue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: my-queue-${opt:stage, 'dev'}
 
 custom:
   serverless-offline:
