@@ -1,6 +1,6 @@
 # Serverless ExpressJS Codespace
 
-This project runs a Serverless API in GitHub Codespaces.
+This project runs a Serverless API on GitHub Codespaces.
 
 It's built and runs on:
 
